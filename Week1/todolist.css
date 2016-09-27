@@ -1,0 +1,58 @@
+* {
+	font-size: 20px;
+	font-family: 'Baloo Bhai', cursive;
+}
+#container {
+	width: 360px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin: 0 auto;
+}
+.state {
+	width: 110px;
+	display: inline-block;
+}
+#stateContainer {
+	width: 360px;
+	margin-top: -15px;
+}
+.todo:hover {
+	color: red;
+	background-color: black;
+}
+.done {
+	color: blue;
+}
+.done:hover {
+	color: white;
+	background-color: black;
+}
+#active {
+	color: red;
+	/*background-color: blue;*/
+}
+#done {
+	color: blue;
+	/*background-color: red;*/
+}
+#all {
+	width: 80px;
+	margin-left: 52px;
+	/*background-color: green;*/
+}
+.rBtn {
+	height: 37px;
+	width: 175px;
+	margin-left: 3px;
+}
+#input {
+	width: 360px;
+}
+#todolist {
+	font-size: 40px;
+	width: 210px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin: 0 auto;
+}
+
