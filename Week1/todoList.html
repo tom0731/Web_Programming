@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>What do you want to do ?</title>
+	<style type="text/css">
+	* {
+		font-size: 20px
+	}
+	.state {
+		display: inline-block;
+	}
+	.todo:hover {
+		color: white;
+		background-color: black;
+	}
+	</style>
+</head>
+<body>
+	<input id="input" type="text">
+	<div id="todolist">My Todolist</div>
+	<div class="state" id="all">All: 0</div>
+	<div class="state" id="active">Active: 0</div>
+	<div class="state" id="done">Done: 0</div>
+	<div>
+		<button class="rBtn" id="All">remove all</button>
+		<button class="rBtn" id="Done">remove done</button>
+	</div>
+</body>
+<script src="./todoList.js"></script>
+</html>
+
