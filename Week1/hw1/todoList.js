@@ -18,7 +18,6 @@ todoIn.onkeypress = function(e) {
 					e.target.innerHTML = e.target.innerHTML + " is done!";
 					stateChange(state[1], -1);
 					stateChange(state[2], 1);
-					e.target.done = true;
 					e.target.setAttribute('class', 'done');
 				}
 				else {

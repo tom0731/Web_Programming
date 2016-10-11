@@ -1,0 +1,22 @@
+{
+  "name": "hw2",
+  "version": "1.0.0",
+  "description": "Web Programming hw2",
+  "main": "hw2",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\"git+https://github.com/tom0731/Web_Programming.git\""
+  },
+  "author": "En-Yu Fan",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^3.7.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1"
+  }
+}
