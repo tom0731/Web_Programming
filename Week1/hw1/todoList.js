@@ -12,7 +12,7 @@ todoIn.onkeypress = function(e) {
 			newTodo = document.createElement('div');
 			newTodo.setAttribute('class', 'todo');
 			newTodo.innerHTML = todoIn.value;
-			newTodo.done = false;
+			// newTodo.done = false;
 			newTodo.onclick = function (e) {
 				if (e.target.className === 'todo') {
 					e.target.innerHTML = e.target.innerHTML + " is done!";
