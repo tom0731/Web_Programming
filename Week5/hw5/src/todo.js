@@ -1,45 +1,10 @@
-const { Component } = React;
+import './todo.css'
 
-class TodoItem extends Component {
-	constructor(props) {
-		super(props);
+import TodoItem from './TodoItem'
+import CountDisplay from './CountDisplay'
 
-		// Bind handler here!
-		this.toggleDoneClick = this.toggleDoneClick.bind(this);
-	}
-
-	toggleDoneClick(e) {
-		this.props.toggleDoneClick(e, this.props.idx);
-	}
-
-	render() {
-		return (
-			<div className="todo" onClick={ this.toggleDoneClick }>
-				{ this.props.itemName }
-			</div>
-		);
-	}
-}
-
-TodoItem.propTypes = {
-	itemName: React.PropTypes.string,
-	toggleDoneClick: React.PropTypes.func
-};
-
-class CountDisplay extends Component {
-	render() {
-		return (
-			<div className="counter" id={ this.props.id }>
-				{ this.props.id + ': ' + this.props.count }
-			</div>
-		);
-	}
-}
-
-CountDisplay.propTypes = {
-	id: React.PropTypes.string,
-	count: React.PropTypes.number
-};
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
 class TodoApp extends Component {
 	constructor(props) {
@@ -92,8 +57,7 @@ class TodoApp extends Component {
 			// e.target.setAttribute('class', 'done');
 		} else {
 			items[idx].value =
-				items[idx].value.substring(
-					0, items[idx].value.length - 10);
+				items[idx].value.substring(0, items[idx].value.length - 10);
 			numOfActive = this.state.numOfActive + 1;
 			numOfDone = this.state.numOfDone - 1;
 			// e.target.setAttribute('class', 'todo');
