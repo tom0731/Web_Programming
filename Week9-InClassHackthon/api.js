@@ -8,7 +8,7 @@ const router = new Router();
 router.post('/uploadPhotos/', (req, res) => {
 	res.send('upload sucessfully...');
 
-	var form = new formidable.IncomingForm();
+	let form = new formidable.IncomingForm();
 
 	form.on('fileBegin', function(name, file) {
 		file.path = './myUploadPhotos/' + file.name
