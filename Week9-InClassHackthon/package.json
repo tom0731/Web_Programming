@@ -1,0 +1,45 @@
+{
+  "name": "Week9",
+  "version": "0.0.1",
+  "description": "In-class hackthon",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "lint": "eslint src",
+    "build": "webpack --config webpack.config.js",
+    "build:watch": "npm run build -- --watch",
+    "start": "babel-node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tom0731/Web_Programming/tree/master/Week9-InClassHackthon"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-transform-object-rest-spread": "^6.16.0",
+    "babel-plugin-transform-class-properties": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.25.0",
+    "enzyme": "^2.5.1",
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.5.0",
+    "react-addons-test-utils": "^15.3.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.2"
+  },
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "serve": "^1.4.0",
+    "express": "^4.14.0"
+  }
+}
