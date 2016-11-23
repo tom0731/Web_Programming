@@ -6,9 +6,13 @@ const router = new Router();
 
 // console.log("apiiiiiipaiapaiaia");
 router.post('/uploadPhotos/', (req, res) => {
-	res.send("upload sucessfully...");
+	res.send('upload sucessfully...');
 
 	var form = new formidable.IncomingForm();
+
+	form.on('fileBegin', function(name, file) {
+		file.path = './myUploadPhotos/' + file.name
+	});
 
   form.parse(req, function(err, fields, files) {
     console.log(util.inspect({fields: fields, files: files}));
