@@ -28,19 +28,18 @@ class Album extends Component {
 	}
 
 	onClickUploadPhoto(e) {
-		console.log(this.state);
+		// console.log(this.state);
 		const {photofile, photoNum} = this.state;
+		console.log(photofile);
 		let form = new FormData();
 		form.append(`photo_${photoNum}`, photofile)
-		fetch('/api/photos/', { method: 'POST', body: form })
-			.then(response => {
-				// return response;
-				// console.log(response);
-				return response.json();
+		console.log(form.values().next());
+		fetch('/api/uploadPhotos/', { method: 'POST', body: form })
+			.then(res => {
+				// console.log(res);
+				return res.text();
 			})
-			.then((json) => console.log(json));
-			// .then(ss => {
-			// });
+			.then((text) => console.log(text));
 	}
 
 	render() {
@@ -49,7 +48,7 @@ class Album extends Component {
 				<div className="button">
 					<input
 						className="photoUploader"
-						id="photo-file"
+						id="photoFile"
 						type="file"
 						accept=".jpg, .png"
 						onChange={ this.getUploadPhoto }
@@ -58,7 +57,7 @@ class Album extends Component {
 						className="uploadBtn"
 						id="upload"
 						onClick={ this.onClickUploadPhoto }
-					>Upload Photos
+					>upload
 					</button>
 				</div>
 			</div>
