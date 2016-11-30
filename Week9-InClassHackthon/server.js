@@ -12,6 +12,8 @@ const port = process.env.PORT || 3000;
 const app = express();
 const compiler = webpack(config);
 
+app.use(express.static(path.join(__dirname, '/myUploadPhotos')));
+
 app.use(require('webpack-dev-middleware')(compiler, {
   publicPath: config.output.publicPath,
   stats: {
