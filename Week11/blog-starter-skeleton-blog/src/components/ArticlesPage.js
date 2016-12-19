@@ -28,7 +28,7 @@ class ArticlesPage extends Component {
       return (
         <tr key={i}>
           <th>
-            <a href={`#/articles/${article._id}`}>{article._id}</a>
+            <a href={`#/articles/${article._id}`}>{`article${i+1}`}</a>
           </th>
           <th>{article.title}</th>
           <th>{article.tags.join(' ')}</th>

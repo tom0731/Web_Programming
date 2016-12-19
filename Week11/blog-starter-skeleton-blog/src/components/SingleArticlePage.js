@@ -110,11 +110,16 @@ class SingleArticlePage extends Component {
     else {
       return (
         <div>
+          Tags:  
           { tags.map((tag, i) => { 
-              <button key={i}
-                type="button"
-                className="btn btn-secondary btn-sm">#{tag}
-              </button>
+              return (
+                <button
+                  key={i}
+                  type="button"
+                  className="btn btn-secondary btn-sm"
+                >{`${tag}`}
+                </button>
+              );
             })
           }
         </div>
@@ -148,7 +153,6 @@ class SingleArticlePage extends Component {
               {this.renderTitle()}
             </div>
           </div>
-
         </div>
         <div className="row">
           <div className="col-md-12">
